@@ -1,187 +1,28 @@
-<script>
-let currentQuestions = [];
-let currentIndex = 0;
-let score = 0;
-let currentSubject = '';
-let backgroundMusic = new Audio("assets/bg-music.mp3");
-let correctSound = new Audio("assets/correct.mp3");
-let wrongSound = new Audio("assets/wrong.mp3");
-
-backgroundMusic.loop = true;
-backgroundMusic.volume = 0.3;
-
-function playMusic() {
-  if (backgroundMusic.paused) backgroundMusic.play();
+.option-button {
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 16px;
+  border-radius: 14px;
+  width: 100%;
+  transition: all 0.3s ease;
+  color: white;
 }
 
-// ==== Hàm bắt đầu game cho từng môn ====
-function startMath() {
-  fetch('data/toan2.json')
-    .then(res => res.json())
-    .then(data => {
-      startGame('🔢 Toán 2', data);
-    });
+.option-button:nth-child(1) {
+  background: linear-gradient(135deg, #f87171, #ef4444); /* đỏ */
+}
+.option-button:nth-child(2) {
+  background: linear-gradient(135deg, #60a5fa, #2563eb); /* xanh dương */
+}
+.option-button:nth-child(3) {
+  background: linear-gradient(135deg, #34d399, #059669); /* xanh lá */
+}
+.option-button:nth-child(4) {
+  background: linear-gradient(135deg, #fbbf24, #d97706); /* vàng cam */
 }
 
-function startVietnamese() {
-  fetch('data/tiengviet2.json')
-    .then(res => res.json())
-    .then(data => {
-      startGame('📘 Tiếng Việt 2', data);
-    });
+.option-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
 }
-
-function startScience() {
-  fetch('data/tnxh2.json')
-    .then(res => res.json())
-    .then(data => {
-      startGame('🌱 Tự nhiên & Xã hội 2', data);
-    });
-}
-
-function startEnglish() {
-  fetch('data/tienganh2.json')
-    .then(res => res.json())
-    .then(data => {
-      startGame('🌍 English 2', data);
-    });
-}
-
-function startMixed() {
-  fetch('data/honhop.json')
-    .then(res => res.json())
-    .then(data => {
-      startGame('🎲 Hỗn hợp', data);
-    });
-}
-
-// ==== Logic game ====
-function startGame(subject, questions) {
-  currentSubject = subject;
-  currentQuestions = shuffleArray(questions).slice(0, 10);
-  currentIndex = 0;
-  score = 0;
-  playMusic();
-  showScreen('gameScreen');
-  displayQuestion();
-}
-
-function displayQuestion() {
-  const question = currentQuestions[currentIndex];
-  document.getElementById('subjectDisplay').textContent = currentSubject;
-  document.getElementById('progressDisplay').textContent = `Câu ${currentIndex + 1}/${currentQuestions.length}`;
-  document.getElementById('progressBar').style.width =
-    `${((currentIndex + 1) / currentQuestions.length) * 100}%`;
-
-  document.getElementById('questionDisplay').textContent = question.q;
-
-  // Hiển thị đáp án
-  const container = document.getElementById('optionsContainer');
-  container.innerHTML = '';
-  question.options.forEach((option, index) => {
-    const btn = document.createElement('button');
-    btn.className = 'option-button w-full p-5 text-center rounded-xl text-xl font-bold';
-    btn.textContent = option;
-    btn.onclick = () => selectOption(index);
-    container.appendChild(btn);
-  });
-}
-
-function selectOption(selectedIndex) {
-  const question = currentQuestions[currentIndex];
-  const isCorrect = selectedIndex === question.answer;
-  const buttons = document.querySelectorAll('#optionsContainer button');
-
-  buttons.forEach((btn, index) => {
-    btn.disabled = true;
-    if (index === question.answer) {
-      btn.classList.add('bg-green-500', 'text-white');
-      btn.textContent = `✅ ${question.options[index]}`;
-    } else if (index === selectedIndex) {
-      btn.classList.add('bg-red-500', 'text-white');
-      btn.textContent = `❌ ${question.options[index]}`;
-    } else {
-      btn.classList.add('opacity-50');
-    }
-  });
-
-  if (isCorrect) {
-    score++;
-    correctSound.play();
-    createFireworks();
-  } else {
-    wrongSound.play();
-    showEncouragement(question.options[question.answer]);
-  }
-
-  setTimeout(() => nextQuestion(), 2000);
-}
-
-function nextQuestion() {
-  if (currentIndex + 1 < currentQuestions.length) {
-    currentIndex++;
-    displayQuestion();
-  } else {
-    showResults();
-  }
-}
-
-function showResults() {
-  const percent = Math.round((score / currentQuestions.length) * 100);
-  document.getElementById('scoreDisplay').textContent =
-    `${score}/${currentQuestions.length} câu đúng`;
-  document.getElementById('percentDisplay').textContent = `${percent}%`;
-  showScreen('resultScreen');
-}
-
-function playAgain() {
-  startGame(currentSubject, currentQuestions);
-}
-
-function showScreen(screen) {
-  ['homeScreen', 'gameScreen', 'resultScreen'].forEach(id => {
-    document.getElementById(id).style.display = 'none';
-  });
-  document.getElementById(screen).style.display = 'block';
-}
-
-function goToHome() {
-  showScreen('homeScreen');
-}
-
-// ==== Tiện ích ====
-function shuffleArray(array) {
-  const arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
-function createFireworks() {
-  const container = document.getElementById('fireworksContainer');
-  for (let i = 0; i < 10; i++) {
-    const dot = document.createElement('div');
-    dot.className = 'firework';
-    dot.style.left = Math.random() * 100 + '%';
-    dot.style.top = Math.random() * 100 + '%';
-    dot.style.background = 'hsl(' + Math.random() * 360 + ',100%,50%)';
-    container.appendChild(dot);
-    setTimeout(() => dot.remove(), 1000);
-  }
-}
-
-function showEncouragement(correctAnswer) {
-  const box = document.getElementById('encouragementMessage');
-  box.innerHTML = `
-    <div class="text-center">
-      <div class="text-3xl mb-2">💡</div>
-      <div class="font-bold text-lg text-red-600">Sai rồi!</div>
-      <div class="text-sm">Đáp án đúng: <b>${correctAnswer}</b></div>
-    </div>
-  `;
-  box.style.display = 'block';
-  setTimeout(() => (box.style.display = 'none'), 2000);
-}
-</script>
