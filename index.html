@@ -6,119 +6,194 @@
   <title>🌸 Bé Na Vui Học 🌸</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: 'Comic Sans MS', cursive; }
-    .marquee { width:100%; overflow:hidden; white-space:nowrap; animation: marquee 12s linear infinite; }
-    @keyframes marquee { 0% { text-indent:100% } 100% { text-indent:-100% } }
-    .celebrate { animation: pop 0.6s ease; }
-    @keyframes pop { 0%{transform:scale(0.5);opacity:0;} 100%{transform:scale(1);opacity:1;} }
-    .btn { font-size:1.5rem; padding:1rem 2rem; border-radius:1rem; }
+    body { font-family: 'Comic Sans MS', cursive; background: linear-gradient(135deg, #ffe4f3, #fffce0, #e0f7fa); }
+    .marquee { width: 100%; overflow: hidden; white-space: nowrap; box-sizing: border-box; }
+    .marquee span { display: inline-block; padding-left: 100%; animation: marquee 12s linear infinite; font-size: 1.5rem; color: #d63384; font-weight: bold;}
+    @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
+    .subject-btn { font-size: 1.5rem; font-weight: bold; padding: 1.5rem; border-radius: 1rem; transition: 0.3s; }
+    .subject-btn:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(0,0,0,0.3); }
+    .option-btn { font-size: 1.5rem; padding: 1rem; border-radius: 0.75rem; width: 100%; margin: 0.5rem 0; transition: 0.3s; }
+    .option-btn:hover { transform: scale(1.05); }
+    .firework { position: fixed; width: 8px; height: 8px; border-radius: 50%; pointer-events: none; animation: explode 1s ease-out forwards; }
+    @keyframes explode { from { transform: scale(0); opacity: 1; } to { transform: scale(20); opacity: 0; } }
   </style>
 </head>
-<body class="bg-gradient-to-br from-pink-100 via-yellow-50 to-purple-100 min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col">
+
+  <!-- Nhạc -->
+  <audio id="bgMusic" src="assets/bg-music.mp3" loop></audio>
+  <audio id="correctSound" src="assets/correct.mp3"></audio>
+  <audio id="wrongSound" src="assets/wrong.mp3"></audio>
 
   <!-- Header -->
-  <div class="bg-pink-400 py-3 text-center text-white font-bold text-xl shadow">
-    <div class="marquee">🌸🌸🌸 Bé Na Vui Học 🌸🌸🌸</div>
-  </div>
+  <div class="bg-pink-300 py-3 marquee"><span>🌸 🌸 🌸 Bé Na Vui Học 🌸 🌸 🌸</span></div>
 
-  <!-- Home -->
-  <div id="home" class="flex-grow flex flex-col items-center justify-center space-y-6">
-    <h1 class="text-3xl font-extrabold text-purple-700 mb-6">Chọn môn học</h1>
-    <div class="grid grid-cols-1 gap-4">
-      <button onclick="startGame('data/toan2.json','🔢 Toán 2')" class="btn bg-blue-500 text-white shadow">🔢 Toán 2</button>
-      <button onclick="startGame('data/tiengviet2.json','📘 Tiếng Việt 2')" class="btn bg-green-500 text-white shadow">📘 Tiếng Việt 2</button>
-      <button onclick="startGame('data/tnxh2.json','🌱 Tự nhiên & XH 2')" class="btn bg-yellow-500 text-white shadow">🌱 Tự nhiên & XH 2</button>
-      <button onclick="startGame('data/tienganh2.json','🌍 English 2')" class="btn bg-purple-500 text-white shadow">🌍 English 2</button>
-      <button onclick="startGame('mixed','🎲 Hỗn hợp')" class="btn bg-pink-500 text-white shadow">🎲 Hỗn hợp</button>
+  <!-- Màn hình chính -->
+  <div id="home" class="flex-grow flex flex-col justify-center items-center">
+    <h1 class="text-4xl font-extrabold text-purple-700 mb-6">Chọn môn học</h1>
+    <div class="grid grid-cols-2 gap-6 max-w-lg">
+      <button onclick="startGame('toan2.json','🔢 Toán 2')" class="subject-btn bg-blue-400 text-white">🔢 Toán 2</button>
+      <button onclick="startGame('tiengviet2.json','📘 Tiếng Việt 2')" class="subject-btn bg-green-400 text-white">📘 Tiếng Việt 2</button>
+      <button onclick="startGame('tnxh2.json','🌱 Tự nhiên & XH 2')" class="subject-btn bg-yellow-400 text-white">🌱 Tự nhiên & XH 2</button>
+      <button onclick="startGame('tienganh2.json','🌍 English 2')" class="subject-btn bg-red-400 text-white">🌍 English 2</button>
+      <button onclick="startGame('mixed','🎲 Hỗn hợp')" class="col-span-2 subject-btn bg-purple-500 text-white">🎲 Hỗn hợp</button>
+      <button onclick="showAchievements()" class="col-span-2 subject-btn bg-pink-500 text-white">🏆 Thành tựu</button>
     </div>
-    <button onclick="toggleMusic()" class="mt-6 px-6 py-3 bg-red-400 text-white rounded-full">🎵 Bật/Tắt nhạc nền</button>
   </div>
 
-  <!-- Game -->
-  <div id="game" style="display:none;" class="flex-grow flex flex-col items-center justify-center p-4 space-y-6">
-    <h2 id="subject" class="text-3xl font-bold text-purple-700"></h2>
-    <div id="question" class="text-2xl text-center"></div>
-    <div id="options" class="grid gap-4 w-full max-w-md"></div>
-    <div id="progress" class="text-lg text-gray-600"></div>
+  <!-- Màn hình game -->
+  <div id="game" class="hidden flex-grow flex flex-col justify-center items-center text-center px-4">
+    <h2 id="subjectTitle" class="text-3xl font-bold mb-6"></h2>
+    <p id="question" class="text-2xl mb-6"></p>
+    <div id="options" class="w-full max-w-md"></div>
+    <p id="progress" class="mt-4 text-lg text-gray-600"></p>
   </div>
 
-  <!-- Result -->
-  <div id="result" style="display:none;" class="flex-grow flex flex-col items-center justify-center space-y-4">
-    <div id="emoji" class="text-6xl"></div>
-    <h2 id="summary" class="text-2xl font-bold"></h2>
-    <button onclick="backHome()" class="px-8 py-4 bg-pink-400 rounded-full text-white text-xl">🏠 Về trang chủ</button>
+  <!-- Màn hình kết quả -->
+  <div id="result" class="hidden flex-grow flex flex-col justify-center items-center text-center">
+    <h2 class="text-3xl font-bold mb-4">Kết quả</h2>
+    <p id="score" class="text-2xl mb-4"></p>
+    <button onclick="goHome()" class="subject-btn bg-gray-500 text-white">🏠 Về trang chủ</button>
   </div>
 
-<script>
-let questions=[], current=0, score=0;
-let bgm = new Audio("assets/bg-music.mp3");
-bgm.loop = true;
-let soundCorrect = new Audio("assets/correct.mp3");
-let soundWrong = new Audio("assets/wrong.mp3");
+  <!-- Màn hình thành tựu -->
+  <div id="achievements" class="hidden flex-grow p-6">
+    <h2 class="text-3xl font-bold text-center mb-6">🏆 Thành tựu của Bé Na</h2>
+    <div id="achievementsList" class="space-y-4"></div>
+    <div class="text-center mt-6">
+      <button onclick="goHome()" class="subject-btn bg-gray-500 text-white">🏠 Về trang chủ</button>
+    </div>
+  </div>
 
-async function startGame(file, subject) {
-  document.getElementById('home').style.display='none';
-  document.getElementById('game').style.display='flex';
-  document.getElementById('subject').innerText = subject;
+  <script>
+    const home = document.getElementById("home");
+    const game = document.getElementById("game");
+    const result = document.getElementById("result");
+    const achievements = document.getElementById("achievements");
+    const bgMusic = document.getElementById("bgMusic");
+    const correctSound = document.getElementById("correctSound");
+    const wrongSound = document.getElementById("wrongSound");
 
-  if (file === 'mixed') {
-    const files = ['data/toan2.json','data/tiengviet2.json','data/tnxh2.json','data/tienganh2.json'];
-    let all = [];
-    for (let f of files) {
-      let res = await fetch(f); let js = await res.json(); all = all.concat(js);
+    let questions = [];
+    let current = 0;
+    let score = 0;
+    let subject = "";
+
+    function startGame(file, title) {
+      home.classList.add("hidden");
+      result.classList.add("hidden");
+      achievements.classList.add("hidden");
+      game.classList.remove("hidden");
+      document.getElementById("subjectTitle").innerText = title;
+      subject = title;
+
+      if (file === "mixed") {
+        Promise.all([
+          fetch("data/toan2.json").then(r=>r.json()),
+          fetch("data/tiengviet2.json").then(r=>r.json()),
+          fetch("data/tnxh2.json").then(r=>r.json()),
+          fetch("data/tienganh2.json").then(r=>r.json())
+        ]).then(all => {
+          questions = [].concat(...all);
+          startQuiz();
+        });
+      } else {
+        fetch("data/" + file).then(r=>r.json()).then(data=>{
+          questions = data;
+          startQuiz();
+        });
+      }
+      bgMusic.play();
     }
-    questions = shuffle(all).slice(0,10);
-  } else {
-    let res = await fetch(file); questions = await res.json();
-    questions = shuffle(questions).slice(0,10);
-  }
-  current=0; score=0; showQuestion();
-}
 
-function showQuestion(){
-  let q=questions[current];
-  document.getElementById('question').innerText=q.q;
-  let opt=document.getElementById('options'); opt.innerHTML='';
-  q.options.forEach((o,i)=>{
-    let b=document.createElement('button');
-    b.className="p-4 text-xl bg-white rounded-xl shadow hover:bg-purple-100 w-full";
-    b.innerText=o; 
-    b.onclick=()=>check(i===q.answer);
-    opt.appendChild(b);
-  });
-  document.getElementById('progress').innerText=`Câu ${current+1}/${questions.length}`;
-}
+    function startQuiz() {
+      questions = shuffle(questions).slice(0,10);
+      current = 0;
+      score = 0;
+      showQuestion();
+    }
 
-function check(correct){
-  if(correct){ score++; soundCorrect.play(); celebrate("🎉 Đúng rồi!"); }
-  else { soundWrong.play(); celebrate("💔 Sai mất rồi!"); }
-  setTimeout(()=>{ current++; (current<questions.length)?showQuestion():endGame(); },1500);
-}
+    function showQuestion() {
+      const q = questions[current];
+      document.getElementById("question").innerText = q.q;
+      document.getElementById("options").innerHTML = "";
+      q.options.forEach((opt,i)=>{
+        const btn = document.createElement("button");
+        btn.className = "option-btn bg-white border";
+        btn.innerText = opt;
+        btn.onclick = ()=>checkAnswer(i, q.answer, btn);
+        document.getElementById("options").appendChild(btn);
+      });
+      document.getElementById("progress").innerText = `Câu ${current+1}/10`;
+    }
 
-function celebrate(msg){
-  let q=document.getElementById('question');
-  q.innerText=msg;
-  q.classList.add("celebrate");
-  setTimeout(()=>q.classList.remove("celebrate"),600);
-}
+    function checkAnswer(i, correct, btn) {
+      if (i === correct) {
+        score++;
+        btn.classList.add("bg-green-400","text-white");
+        correctSound.play();
+        fireworks();
+      } else {
+        btn.classList.add("bg-red-400","text-white");
+        wrongSound.play();
+      }
+      setTimeout(()=>{
+        current++;
+        if (current<10) showQuestion(); else endGame();
+      },1000);
+    }
 
-function endGame(){
-  document.getElementById('game').style.display='none';
-  document.getElementById('result').style.display='flex';
-  document.getElementById('emoji').innerText = score>=8?"🏆":score>=5?"🌟":"💪";
-  document.getElementById('summary').innerText = `Bé trả lời đúng ${score}/${questions.length} câu`;
-}
+    function endGame() {
+      game.classList.add("hidden");
+      result.classList.remove("hidden");
+      document.getElementById("score").innerText = `Bé làm đúng ${score}/10 câu`;
 
-function backHome(){
-  document.getElementById('result').style.display='none';
-  document.getElementById('home').style.display='flex';
-}
+      // lưu thành tựu
+      const all = JSON.parse(localStorage.getItem("achievements")||"[]");
+      all.push({subject, score, date:new Date().toLocaleString("vi-VN")});
+      localStorage.setItem("achievements", JSON.stringify(all));
+    }
 
-function shuffle(a){return a.sort(()=>Math.random()-0.5);}
+    function showAchievements() {
+      home.classList.add("hidden");
+      result.classList.add("hidden");
+      game.classList.add("hidden");
+      achievements.classList.remove("hidden");
+      const list = document.getElementById("achievementsList");
+      const all = JSON.parse(localStorage.getItem("achievements")||"[]");
+      if (all.length===0) {
+        list.innerHTML = "<p class='text-center text-gray-500'>Chưa có thành tựu nào 🌸</p>";
+      } else {
+        list.innerHTML = all.map(a=>`
+          <div class="p-4 bg-white shadow rounded">
+            <p><b>${a.subject}</b></p>
+            <p>Điểm: ${a.score}/10</p>
+            <p class="text-sm text-gray-500">${a.date}</p>
+          </div>`).join("");
+      }
+    }
 
-function toggleMusic(){
-  if(bgm.paused){ bgm.play(); } else { bgm.pause(); }
-}
-</script>
+    function goHome() {
+      home.classList.remove("hidden");
+      game.classList.add("hidden");
+      result.classList.add("hidden");
+      achievements.classList.add("hidden");
+    }
+
+    function shuffle(arr) { return arr.sort(()=>Math.random()-0.5); }
+
+    function fireworks() {
+      const colors=["#ff6b6b","#ffd93d","#6bcBef","#51cf66","#845ef7"];
+      for (let i=0;i<10;i++) {
+        const fw=document.createElement("div");
+        fw.className="firework";
+        fw.style.left=Math.random()*100+"%";
+        fw.style.top=Math.random()*100+"%";
+        fw.style.backgroundColor=colors[Math.floor(Math.random()*colors.length)];
+        document.body.appendChild(fw);
+        setTimeout(()=>fw.remove(),1000);
+      }
+    }
+  </script>
 </body>
 </html>
