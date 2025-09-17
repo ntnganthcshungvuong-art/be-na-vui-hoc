@@ -1,0 +1,1002 @@
+[
+  {
+    "q": "14 - 20 = ?",
+    "options": [
+      "-9",
+      "-3",
+      "-4",
+      "-6"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "15 - 10 = ?",
+    "options": [
+      "5",
+      "8",
+      "7",
+      "3"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "20 + 8 = ?",
+    "options": [
+      "26",
+      "27",
+      "28",
+      "31"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "10 ÷ 1 = ?",
+    "options": [
+      "13",
+      "9",
+      "10",
+      "7"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "9 - 11 = ?",
+    "options": [
+      "-3",
+      "-2",
+      "1",
+      "-5"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "5 × 3 = ?",
+    "options": [
+      "14",
+      "18",
+      "15",
+      "12"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "20 + 12 = ?",
+    "options": [
+      "30",
+      "29",
+      "32",
+      "34"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "20 × 10 = ?",
+    "options": [
+      "201",
+      "200",
+      "202",
+      "203"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "160 ÷ 10 = ?",
+    "options": [
+      "14",
+      "15",
+      "16",
+      "13"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "8 - 18 = ?",
+    "options": [
+      "-13",
+      "-9",
+      "-7",
+      "-10"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "14 × 2 = ?",
+    "options": [
+      "29",
+      "28",
+      "31",
+      "25"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "11 - 15 = ?",
+    "options": [
+      "-3",
+      "-7",
+      "-4",
+      "-2"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "13 × 1 = ?",
+    "options": [
+      "12",
+      "10",
+      "14",
+      "13"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "7 + 12 = ?",
+    "options": [
+      "17",
+      "16",
+      "19",
+      "18"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "7 - 14 = ?",
+    "options": [
+      "-4",
+      "-8",
+      "-7",
+      "-10"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "5 - 8 = ?",
+    "options": [
+      "-3",
+      "-5",
+      "-6",
+      "-2"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "19 + 10 = ?",
+    "options": [
+      "29",
+      "28",
+      "31",
+      "30"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "5 × 11 = ?",
+    "options": [
+      "57",
+      "54",
+      "55",
+      "52"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "30 ÷ 10 = ?",
+    "options": [
+      "2",
+      "5",
+      "1",
+      "3"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "19 × 1 = ?",
+    "options": [
+      "17",
+      "19",
+      "20",
+      "16"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "17 × 11 = ?",
+    "options": [
+      "186",
+      "187",
+      "184",
+      "185"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "4 - 4 = ?",
+    "options": [
+      "-2",
+      "0",
+      "3",
+      "1"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "10 ÷ 10 = ?",
+    "options": [
+      "-2",
+      "3",
+      "2",
+      "1"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "6 × 12 = ?",
+    "options": [
+      "69",
+      "73",
+      "72",
+      "74"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "9 + 6 = ?",
+    "options": [
+      "14",
+      "12",
+      "16",
+      "15"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ đồng nghĩa với 'đẹp'?",
+    "options": [
+      "xấu",
+      "xinh",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ trái nghĩa của 'nóng' là gì?",
+    "options": [
+      "ấm",
+      "lạnh",
+      "mát",
+      "se"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Âm đầu của từ 'bàn' là gì?",
+    "options": [
+      "b",
+      "à",
+      "n",
+      "ba"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nóng' là gì?",
+    "options": [
+      "ấm",
+      "lạnh",
+      "mát",
+      "se"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào lá cây rụng nhiều?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào cho sữa?",
+    "options": [
+      "Gà",
+      "Vịt",
+      "Bò",
+      "Lợn"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời lặn ở hướng nào?",
+    "options": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Cây cối cần gì để quang hợp?",
+    "options": [
+      "Nước",
+      "Ánh sáng",
+      "Ánh sáng và nước",
+      "Không cần"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào bay được?",
+    "options": [
+      "Cá",
+      "Chim",
+      "Chó",
+      "Mèo"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời lặn ở hướng nào?",
+    "options": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Cây cối cần gì để quang hợp?",
+    "options": [
+      "Nước",
+      "Ánh sáng",
+      "Ánh sáng và nước",
+      "Không cần"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Trái đất có bao nhiêu lục địa?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào lá cây rụng nhiều?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời lặn ở hướng nào?",
+    "options": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào lá cây rụng nhiều?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Cây cối cần gì để quang hợp?",
+    "options": [
+      "Nước",
+      "Ánh sáng",
+      "Ánh sáng và nước",
+      "Không cần"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào đẻ trứng?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Gà",
+      "Bò"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời lặn ở hướng nào?",
+    "options": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "How many days in a week?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "What is 'màu vàng' in English?",
+    "options": [
+      "Red",
+      "Blue",
+      "Yellow",
+      "Green"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "What is 'màu xanh' in English?",
+    "options": [
+      "Red",
+      "Blue",
+      "Yellow",
+      "Pink"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "What is 'con mèo' in English?",
+    "options": [
+      "Dog",
+      "Cat",
+      "Bird",
+      "Fish"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "What is 'con mèo' in English?",
+    "options": [
+      "Dog",
+      "Cat",
+      "Bird",
+      "Fish"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "What is 'con chó' in English?",
+    "options": [
+      "Cat",
+      "Dog",
+      "Bird",
+      "Fish"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "How many days in a week?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "What is 'màu đỏ' in English?",
+    "options": [
+      "Blue",
+      "Green",
+      "Yellow",
+      "Red"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "How many days in a week?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "What is 'con chim' in English?",
+    "options": [
+      "Cat",
+      "Dog",
+      "Bird",
+      "Fish"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "What color is the sun?",
+    "options": [
+      "Blue",
+      "Yellow",
+      "Green",
+      "Red"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "What is 'màu xanh' in English?",
+    "options": [
+      "Red",
+      "Blue",
+      "Yellow",
+      "Pink"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "What is 'con mèo' in English?",
+    "options": [
+      "Dog",
+      "Cat",
+      "Bird",
+      "Fish"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "How many eyes do you have?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "What is 'màu vàng' in English?",
+    "options": [
+      "Red",
+      "Blue",
+      "Yellow",
+      "Green"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "What is 'con mèo' in English?",
+    "options": [
+      "Dog",
+      "Cat",
+      "Bird",
+      "Fish"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "How many eyes do you have?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "How many eyes do you have?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "How many fingers do you have?",
+    "options": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "What is 'màu xanh' in English?",
+    "options": [
+      "Red",
+      "Blue",
+      "Yellow",
+      "Pink"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "How many eyes do you have?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "How many eyes do you have?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "What is 'màu vàng' in English?",
+    "options": [
+      "Red",
+      "Blue",
+      "Yellow",
+      "Green"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "How many fingers do you have?",
+    "options": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "What is 'màu xanh' in English?",
+    "options": [
+      "Red",
+      "Blue",
+      "Yellow",
+      "Pink"
+    ],
+    "answer": 1
+  }
+]

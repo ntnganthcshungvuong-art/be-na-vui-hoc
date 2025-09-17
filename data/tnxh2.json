@@ -1,1 +1,1002 @@
-
+[
+  {
+    "q": "Mùa nào lá cây rụng nhiều?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào cho sữa?",
+    "options": [
+      "Gà",
+      "Vịt",
+      "Bò",
+      "Lợn"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời lặn ở hướng nào?",
+    "options": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Cây cối cần gì để quang hợp?",
+    "options": [
+      "Nước",
+      "Ánh sáng",
+      "Ánh sáng và nước",
+      "Không cần"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào bay được?",
+    "options": [
+      "Cá",
+      "Chim",
+      "Chó",
+      "Mèo"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời lặn ở hướng nào?",
+    "options": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Cây cối cần gì để quang hợp?",
+    "options": [
+      "Nước",
+      "Ánh sáng",
+      "Ánh sáng và nước",
+      "Không cần"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Trái đất có bao nhiêu lục địa?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào lá cây rụng nhiều?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời lặn ở hướng nào?",
+    "options": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào lá cây rụng nhiều?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Cây cối cần gì để quang hợp?",
+    "options": [
+      "Nước",
+      "Ánh sáng",
+      "Ánh sáng và nước",
+      "Không cần"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào đẻ trứng?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Gà",
+      "Bò"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời lặn ở hướng nào?",
+    "options": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào lá cây rụng nhiều?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Trái đất có bao nhiêu lục địa?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào đẻ trứng?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Gà",
+      "Bò"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào bay được?",
+    "options": [
+      "Cá",
+      "Chim",
+      "Chó",
+      "Mèo"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Trái đất có bao nhiêu lục địa?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Cây cối cần gì để quang hợp?",
+    "options": [
+      "Nước",
+      "Ánh sáng",
+      "Ánh sáng và nước",
+      "Không cần"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào cho sữa?",
+    "options": [
+      "Gà",
+      "Vịt",
+      "Bò",
+      "Lợn"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào cho sữa?",
+    "options": [
+      "Gà",
+      "Vịt",
+      "Bò",
+      "Lợn"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào cho sữa?",
+    "options": [
+      "Gà",
+      "Vịt",
+      "Bò",
+      "Lợn"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào cho sữa?",
+    "options": [
+      "Gà",
+      "Vịt",
+      "Bò",
+      "Lợn"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào cho sữa?",
+    "options": [
+      "Gà",
+      "Vịt",
+      "Bò",
+      "Lợn"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Trái đất có bao nhiêu lục địa?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Cây cối cần gì để quang hợp?",
+    "options": [
+      "Nước",
+      "Ánh sáng",
+      "Ánh sáng và nước",
+      "Không cần"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào đẻ trứng?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Gà",
+      "Bò"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào bay được?",
+    "options": [
+      "Cá",
+      "Chim",
+      "Chó",
+      "Mèo"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào cho sữa?",
+    "options": [
+      "Gà",
+      "Vịt",
+      "Bò",
+      "Lợn"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào đẻ trứng?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Gà",
+      "Bò"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Trái đất có bao nhiêu lục địa?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời lặn ở hướng nào?",
+    "options": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào bay được?",
+    "options": [
+      "Cá",
+      "Chim",
+      "Chó",
+      "Mèo"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào lá cây rụng nhiều?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào bay được?",
+    "options": [
+      "Cá",
+      "Chim",
+      "Chó",
+      "Mèo"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Trái đất có bao nhiêu lục địa?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào lá cây rụng nhiều?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào bay được?",
+    "options": [
+      "Cá",
+      "Chim",
+      "Chó",
+      "Mèo"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào cho sữa?",
+    "options": [
+      "Gà",
+      "Vịt",
+      "Bò",
+      "Lợn"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào bay được?",
+    "options": [
+      "Cá",
+      "Chim",
+      "Chó",
+      "Mèo"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời lặn ở hướng nào?",
+    "options": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào bay được?",
+    "options": [
+      "Cá",
+      "Chim",
+      "Chó",
+      "Mèo"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào cho sữa?",
+    "options": [
+      "Gà",
+      "Vịt",
+      "Bò",
+      "Lợn"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời lặn ở hướng nào?",
+    "options": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào cho sữa?",
+    "options": [
+      "Gà",
+      "Vịt",
+      "Bò",
+      "Lợn"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào bay được?",
+    "options": [
+      "Cá",
+      "Chim",
+      "Chó",
+      "Mèo"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào bay được?",
+    "options": [
+      "Cá",
+      "Chim",
+      "Chó",
+      "Mèo"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Trái đất có bao nhiêu lục địa?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mùa nào lá cây rụng nhiều?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào đẻ trứng?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Gà",
+      "Bò"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời lặn ở hướng nào?",
+    "options": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Trái đất có bao nhiêu lục địa?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào bay được?",
+    "options": [
+      "Cá",
+      "Chim",
+      "Chó",
+      "Mèo"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Cây cối cần gì để quang hợp?",
+    "options": [
+      "Nước",
+      "Ánh sáng",
+      "Ánh sáng và nước",
+      "Không cần"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào đẻ trứng?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Gà",
+      "Bò"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Cây cối cần gì để quang hợp?",
+    "options": [
+      "Nước",
+      "Ánh sáng",
+      "Ánh sáng và nước",
+      "Không cần"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào đẻ trứng?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Gà",
+      "Bò"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mùa nào lá cây rụng nhiều?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Trái đất có bao nhiêu lục địa?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào lá cây rụng nhiều?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Mặt trời mọc ở hướng nào?",
+    "options": [
+      "Tây",
+      "Đông",
+      "Nam",
+      "Bắc"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Mùa nào nóng nhất?",
+    "options": [
+      "Xuân",
+      "Hạ",
+      "Thu",
+      "Đông"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Con vật nào cho sữa?",
+    "options": [
+      "Gà",
+      "Vịt",
+      "Bò",
+      "Lợn"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Con vật nào sống dưới nước?",
+    "options": [
+      "Chó",
+      "Mèo",
+      "Cá",
+      "Chim"
+    ],
+    "answer": 2
+  }
+]

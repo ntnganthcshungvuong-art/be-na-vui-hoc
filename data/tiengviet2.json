@@ -1,1 +1,1002 @@
-
+[
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ đồng nghĩa với 'đẹp'?",
+    "options": [
+      "xấu",
+      "xinh",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ trái nghĩa của 'nóng' là gì?",
+    "options": [
+      "ấm",
+      "lạnh",
+      "mát",
+      "se"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Âm đầu của từ 'bàn' là gì?",
+    "options": [
+      "b",
+      "à",
+      "n",
+      "ba"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nóng' là gì?",
+    "options": [
+      "ấm",
+      "lạnh",
+      "mát",
+      "se"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ đồng nghĩa với 'nhỏ'?",
+    "options": [
+      "to",
+      "lớn",
+      "bé",
+      "cao"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ nào viết sai?",
+    "options": [
+      "con gà",
+      "con vịt",
+      "con trâu",
+      "con bò"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ đồng nghĩa với 'nhỏ'?",
+    "options": [
+      "to",
+      "lớn",
+      "bé",
+      "cao"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào viết sai?",
+    "options": [
+      "con gà",
+      "con vịt",
+      "con trâu",
+      "con bò"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Từ nào viết sai?",
+    "options": [
+      "con gà",
+      "con vịt",
+      "con trâu",
+      "con bò"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ đồng nghĩa với 'nhỏ'?",
+    "options": [
+      "to",
+      "lớn",
+      "bé",
+      "cao"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Âm đầu của từ 'bàn' là gì?",
+    "options": [
+      "b",
+      "à",
+      "n",
+      "ba"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào viết sai?",
+    "options": [
+      "con gà",
+      "con vịt",
+      "con trâu",
+      "con bò"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Âm cuối của từ 'nhà' là gì?",
+    "options": [
+      "n",
+      "h",
+      "à",
+      "a"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ nào viết sai?",
+    "options": [
+      "con gà",
+      "con vịt",
+      "con trâu",
+      "con bò"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ trái nghĩa của 'nóng' là gì?",
+    "options": [
+      "ấm",
+      "lạnh",
+      "mát",
+      "se"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ đồng nghĩa với 'nhỏ'?",
+    "options": [
+      "to",
+      "lớn",
+      "bé",
+      "cao"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Âm đầu của từ 'bàn' là gì?",
+    "options": [
+      "b",
+      "à",
+      "n",
+      "ba"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ đồng nghĩa với 'nhỏ'?",
+    "options": [
+      "to",
+      "lớn",
+      "bé",
+      "cao"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ đồng nghĩa với 'đẹp'?",
+    "options": [
+      "xấu",
+      "xinh",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nóng' là gì?",
+    "options": [
+      "ấm",
+      "lạnh",
+      "mát",
+      "se"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào viết sai?",
+    "options": [
+      "con gà",
+      "con vịt",
+      "con trâu",
+      "con bò"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Âm đầu của từ 'bàn' là gì?",
+    "options": [
+      "b",
+      "à",
+      "n",
+      "ba"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ đồng nghĩa với 'nhỏ'?",
+    "options": [
+      "to",
+      "lớn",
+      "bé",
+      "cao"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ đồng nghĩa với 'đẹp'?",
+    "options": [
+      "xấu",
+      "xinh",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Âm đầu của từ 'bàn' là gì?",
+    "options": [
+      "b",
+      "à",
+      "n",
+      "ba"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ đồng nghĩa với 'nhỏ'?",
+    "options": [
+      "to",
+      "lớn",
+      "bé",
+      "cao"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ đồng nghĩa với 'nhỏ'?",
+    "options": [
+      "to",
+      "lớn",
+      "bé",
+      "cao"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ đồng nghĩa với 'đẹp'?",
+    "options": [
+      "xấu",
+      "xinh",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ nào viết đúng chính tả?",
+    "options": [
+      "con mèo",
+      "con meo",
+      "con mèw",
+      "con meó"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nóng' là gì?",
+    "options": [
+      "ấm",
+      "lạnh",
+      "mát",
+      "se"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ đồng nghĩa với 'đẹp'?",
+    "options": [
+      "xấu",
+      "xinh",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ đồng nghĩa với 'đẹp'?",
+    "options": [
+      "xấu",
+      "xinh",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào viết sai?",
+    "options": [
+      "con gà",
+      "con vịt",
+      "con trâu",
+      "con bò"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ trái nghĩa của 'nóng' là gì?",
+    "options": [
+      "ấm",
+      "lạnh",
+      "mát",
+      "se"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ trái nghĩa của 'nhanh'?",
+    "options": [
+      "chậm",
+      "to",
+      "nhỏ",
+      "cao"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ đồng nghĩa với 'đẹp'?",
+    "options": [
+      "xấu",
+      "xinh",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ nào viết sai?",
+    "options": [
+      "con gà",
+      "con vịt",
+      "con trâu",
+      "con bò"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Từ nào viết sai?",
+    "options": [
+      "con gà",
+      "con vịt",
+      "con trâu",
+      "con bò"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Từ trái nghĩa của 'nóng' là gì?",
+    "options": [
+      "ấm",
+      "lạnh",
+      "mát",
+      "se"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ đồng nghĩa với 'nhỏ'?",
+    "options": [
+      "to",
+      "lớn",
+      "bé",
+      "cao"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ nào viết sai?",
+    "options": [
+      "con gà",
+      "con vịt",
+      "con trâu",
+      "con bò"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Từ nào đồng nghĩa với 'vui'?",
+    "options": [
+      "buồn",
+      "hạnh phúc",
+      "giận",
+      "sợ"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ đồng nghĩa với 'nhỏ'?",
+    "options": [
+      "to",
+      "lớn",
+      "bé",
+      "cao"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Từ trái nghĩa của 'nóng' là gì?",
+    "options": [
+      "ấm",
+      "lạnh",
+      "mát",
+      "se"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Từ trái nghĩa của 'cao' là gì?",
+    "options": [
+      "thấp",
+      "lớn",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Từ đồng nghĩa với 'đẹp'?",
+    "options": [
+      "xấu",
+      "xinh",
+      "to",
+      "nhỏ"
+    ],
+    "answer": 1
+  }
+]
