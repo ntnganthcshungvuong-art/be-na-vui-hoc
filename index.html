@@ -3,25 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>🌸 Bé Xu Vui Học 🌸</title>
+  <title>🌸 Bé Na Vui Học 🌸</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
     body { font-family: 'Baloo 2', sans-serif; }
-
     /* Popup động viên */
     .encouragement {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      max-width: 260px;
-      background: rgba(255,255,255,0.95);
-      border: 2px solid #fca5a5;
-      border-radius: 16px;
-      padding: 14px;
+      position: fixed; bottom: 20px; right: 20px;
+      max-width: 260px; background: rgba(255,255,255,0.95);
+      border: 2px solid #fca5a5; border-radius: 16px; padding: 14px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-      animation: fadeInOut 3s ease forwards;
-      z-index: 9999;
+      animation: fadeInOut 3s ease forwards; z-index: 9999;
       font-size: 1rem;
     }
     @keyframes fadeInOut {
@@ -30,18 +23,11 @@
       90% { opacity: 1; }
       100% { opacity: 0; transform: translateY(20px); }
     }
-
     /* Rực rỡ đáp án */
     .option-button {
-      padding: 1.2rem;
-      margin-bottom: 0.7rem;
-      border-radius: 1rem;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #fff;
-      transition: transform 0.2s;
-      width: 100%;
-      display: block;
+      padding: 1.2rem; margin-bottom: 0.7rem; border-radius: 1rem;
+      font-size: 1.3rem; font-weight: 700; color: #fff;
+      transition: transform 0.2s; width: 100%; display: block;
     }
     .option-button:nth-child(1){background:linear-gradient(135deg,#f59e0b,#fbbf24);}
     .option-button:nth-child(2){background:linear-gradient(135deg,#3b82f6,#60a5fa);}
@@ -74,8 +60,6 @@
         <div id="questionEmoji" class="text-5xl text-center mb-4">🤔</div>
         <h2 id="questionDisplay" class="text-2xl font-bold text-center mb-6">Câu hỏi...</h2>
         <div id="optionsContainer" class="space-y-3"></div>
-        <div id="fillBlankContainer" style="display:none;" class="text-center"></div>
-        <div id="dragDropContainer" style="display:none;" class="text-center"></div>
       </div>
     </div>
 
@@ -101,18 +85,24 @@
     </div>
   </div>
 
+  <!-- Âm thanh -->
+  <audio id="bgMusic" src="assets/bg-music.mp3" loop></audio>
+  <audio id="correctSound" src="assets/correct.mp3"></audio>
+  <audio id="wrongSound" src="assets/wrong.mp3"></audio>
+
 <script>
 let questions = [];
 let currentIndex = 0, score = 0;
 
 async function startSubject(file, title) {
   try {
-    const r = await fetch('data/' + file + '?v=' + Date.now()); // chống cache
+    const r = await fetch('data/' + file + '?v=' + Date.now());
     if(!r.ok) throw new Error("Không tải được file " + file);
     const data = await r.json();
     questions = shuffleArray(data).slice(0,10);
     currentIndex=0; score=0;
     showScreen("gameScreen");
+    playBgMusic();
     displayQuestion();
   } catch(err) {
     alert("❌ Lỗi tải dữ liệu: " + err.message);
@@ -125,25 +115,17 @@ function displayQuestion() {
   document.getElementById('questionEmoji').textContent = q.emoji || '❓';
   document.getElementById('questionDisplay').textContent = q.q;
 
-  // Ẩn hết
-  document.getElementById('optionsContainer').style.display='none';
-  document.getElementById('fillBlankContainer').style.display='none';
-  document.getElementById('dragDropContainer').style.display='none';
-
-  if(!q.type || q.type==="multiple"){
-    let container=document.getElementById('optionsContainer');
-    container.innerHTML='';
-    if(Array.isArray(q.options)){
-      q.options.forEach((opt,i)=>{
-        let btn=document.createElement('button');
-        btn.className='option-button';
-        btn.textContent = opt;
-        btn.ontouchstart=()=>selectOption(i,q);
-        btn.onclick=()=>selectOption(i,q);
-        container.appendChild(btn);
-      });
-    }
-    container.style.display='block';
+  let container=document.getElementById('optionsContainer');
+  container.innerHTML='';
+  if(Array.isArray(q.options)){
+    q.options.forEach((opt,i)=>{
+      let btn=document.createElement('button');
+      btn.className='option-button';
+      btn.textContent = opt;
+      btn.ontouchstart=()=>selectOption(i,q);
+      btn.onclick=()=>selectOption(i,q);
+      container.appendChild(btn);
+    });
   }
 }
 
@@ -159,15 +141,19 @@ function selectOption(index,q){
       btn.className='w-full block px-4 py-3 rounded-xl bg-gray-200 text-gray-600';
     }
   });
-  if(index===q.answer){ score++; fireworks(); }
-  else { showEncouragement(q.options[q.answer]); }
+  if(index===q.answer){ 
+    score++; fireworks(); playCorrect(); 
+  }
+  else { 
+    showEncouragement(q.options[q.answer]); playWrong(); 
+  }
   setTimeout(()=>{nextQuestion();},2000);
 }
 
 function nextQuestion(){
   currentIndex++;
   if(currentIndex<questions.length){ displayQuestion(); }
-  else { showResults(); }
+  else { showResults(); stopBgMusic(); }
 }
 
 function showResults(){
@@ -177,7 +163,7 @@ function showResults(){
   document.getElementById('percentDisplay').textContent=`${percent}% ${percent>=90?"🏆 Xuất sắc!":percent>=70?"🌟 Tốt lắm!":percent>=50?"👍 Khá tốt!":"💪 Cố gắng hơn nhé!"}`;
 }
 
-function goHome(){ showScreen("homeScreen"); }
+function goHome(){ showScreen("homeScreen"); stopBgMusic(); }
 
 function showScreen(id){
   ["homeScreen","gameScreen","resultScreen"].forEach(s=>{
@@ -200,6 +186,11 @@ function fireworks(){
   document.body.appendChild(e);
   setTimeout(()=>document.body.removeChild(e),1000);
 }
+
+function playBgMusic(){ let m=document.getElementById('bgMusic'); m.volume=0.5; m.play().catch(()=>{}); }
+function stopBgMusic(){ document.getElementById('bgMusic').pause(); }
+function playCorrect(){ let s=document.getElementById('correctSound'); s.currentTime=0; s.play(); }
+function playWrong(){ let s=document.getElementById('wrongSound'); s.currentTime=0; s.play(); }
 
 function shuffleArray(a){return a.map(x=>({x,sort:Math.random()})).sort((a,b)=>a.sort-b.sort).map(({x})=>x);}
 </script>
