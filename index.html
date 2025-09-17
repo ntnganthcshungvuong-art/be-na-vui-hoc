@@ -1,218 +1,219 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🌸 Bé Na Vui Học 🌸</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: 'Comic Sans MS', cursive, sans-serif; background: linear-gradient(135deg,#fdfbfb,#ebedee);}
-    h1 { animation: rainbowText 5s infinite linear; }
-    @keyframes rainbowText {
-      0% {color:#ff4e50;}
-      25% {color:#fc913a;}
-      50% {color:#f9d423;}
-      75% {color:#ede574;}
-      100% {color:#e1f5c4;}
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
+    body { font-family: 'Baloo 2', sans-serif; }
+
+    /* Popup động viên */
+    .encouragement {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      max-width: 250px;
+      background: rgba(255,255,255,0.95);
+      border: 2px solid #fca5a5;
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      animation: fadeInOut 3s ease forwards;
+      z-index: 999;
+    }
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(20px); }
+      10% { opacity: 1; transform: translateY(0); }
+      90% { opacity: 1; }
+      100% { opacity: 0; transform: translateY(20px); }
     }
 
-    /* Neon gradient đáp án */
+    /* Rực rỡ đáp án */
     .option-button {
-      border: none;
-      font-size: 1.3rem;
+      border: none !important;
+      font-size: 1.1rem;
       font-weight: 700;
-      padding: 18px;
-      border-radius: 16px;
-      width: 100%;
       transition: all 0.3s ease;
-      color: white;
+      padding: 1rem;
+      border-radius: 1rem;
+      color: #fff;
     }
     .option-button:nth-child(1) {
-      background: linear-gradient(135deg, #ff9a9e, #ff4e50);
+      background: linear-gradient(135deg, #f59e0b, #fbbf24);
     }
     .option-button:nth-child(2) {
-      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
     }
     .option-button:nth-child(3) {
-      background: linear-gradient(135deg, #f6d365, #fda085);
+      background: linear-gradient(135deg, #10b981, #34d399);
     }
     .option-button:nth-child(4) {
-      background: linear-gradient(135deg, #84fab0, #8fd3f4);
+      background: linear-gradient(135deg, #ec4899, #f472b6);
     }
     .option-button:hover {
-      transform: scale(1.08);
-      box-shadow: 0px 10px 25px rgba(0,0,0,0.25),
-                  0 0 15px rgba(255,255,255,0.6);
-    }
-
-    /* Fireworks */
-    .fireworks {
-      position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:1000;
-    }
-    .firework {
-      position:absolute; width:4px; height:4px; border-radius:50%;
-      animation: explode 1s ease-out forwards;
-    }
-    @keyframes explode {
-      0% { transform: scale(0); opacity:1;}
-      100% { transform: scale(20); opacity:0;}
-    }
-
-    .encouragement { animation: bounce 0.6s ease-out; }
-    @keyframes bounce {
-      0%,20%,50%,80%,100%{transform:translateY(0);}
-      40%{transform:translateY(-10px);}
-      60%{transform:translateY(-5px);}
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center">
+<body class="bg-gradient-to-br from-pink-100 via-yellow-50 to-blue-100">
 
-  <div class="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-6">
-    <h1 class="text-4xl font-extrabold text-center mb-6">🌸 Bé Na Vui Học 🌸</h1>
+  <div class="max-w-4xl mx-auto p-4">
+    <h1 class="text-4xl font-extrabold text-center mb-6 text-purple-700 animate-bounce">
+      🌸 Bé Na Vui Học 🌸
+    </h1>
 
-    <!-- Home Screen -->
-    <div id="homeScreen" class="text-center">
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
-        <button onclick="startMath()" class="p-5 rounded-2xl bg-blue-500 text-white font-bold">🔢<br>Toán 2</button>
-        <button onclick="startVietnamese()" class="p-5 rounded-2xl bg-green-500 text-white font-bold">📘<br>Tiếng Việt 2</button>
-        <button onclick="startScience()" class="p-5 rounded-2xl bg-yellow-500 text-white font-bold">🌱<br>Tự nhiên & Xã hội</button>
-        <button onclick="startEnglish()" class="p-5 rounded-2xl bg-red-500 text-white font-bold">🌍<br>English 2</button>
-        <button onclick="startMixed()" class="p-5 rounded-2xl bg-purple-500 text-white font-bold">🎲<br>Hỗn hợp</button>
+    <!-- Màn hình chính -->
+    <div id="homeScreen">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+        <button onclick="startSubject('toan2.json','🔢 Toán 2')" class="p-5 rounded-2xl bg-blue-500 text-white font-bold">🔢<br>Toán 2</button>
+        <button onclick="startSubject('tiengviet2.json','📘 Tiếng Việt 2')" class="p-5 rounded-2xl bg-green-500 text-white font-bold">📘<br>Tiếng Việt 2</button>
+        <button onclick="startSubject('tnxh2.json','🌱 Tự nhiên & Xã hội 2')" class="p-5 rounded-2xl bg-yellow-500 text-white font-bold">🌱<br>Tự nhiên & Xã hội 2</button>
+        <button onclick="startSubject('tienganh2.json','🌍 English 2')" class="p-5 rounded-2xl bg-red-500 text-white font-bold">🌍<br>English 2</button>
+        <button onclick="startSubject('honhop.json','🎲 Hỗn hợp')" class="p-5 rounded-2xl bg-purple-500 text-white font-bold">🎲<br>Hỗn hợp</button>
       </div>
-      <button onclick="showLeaderboard()" class="bg-pink-500 text-white px-6 py-3 rounded-full">🏆 Bảng xếp hạng</button>
     </div>
 
-    <!-- Game Screen -->
+    <!-- Màn hình chơi -->
     <div id="gameScreen" style="display:none;">
-      <div class="mb-6 bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl p-4 flex justify-between">
-        <span id="subjectDisplay" class="font-bold text-purple-700"></span>
-        <span id="progressDisplay" class="text-purple-600 font-semibold"></span>
-      </div>
-      <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 mb-6">
-        <div class="text-center mb-4">
-          <div class="inline-block p-4 bg-white rounded-xl shadow-md mb-4">
-            <span id="questionEmoji" class="text-5xl">🤔</span>
-          </div>
-          <button id="speakButton" onclick="speakQuestion()" class="hidden bg-blue-500 text-white px-4 py-2 rounded-full mb-3">🔊 Nghe câu hỏi</button>
-        </div>
-        <h2 id="questionDisplay" class="text-2xl font-bold text-gray-800 mb-6 text-center">Đang tải...</h2>
+      <div class="bg-white rounded-2xl p-6 shadow-md">
+        <div id="questionEmoji" class="text-5xl text-center mb-4">🤔</div>
+        <h2 id="questionDisplay" class="text-2xl font-bold text-center mb-6">Câu hỏi...</h2>
         <div id="optionsContainer" class="space-y-3"></div>
+        <div id="fillBlankContainer" style="display:none;" class="text-center"></div>
+        <div id="dragDropContainer" style="display:none;" class="text-center"></div>
       </div>
     </div>
 
-    <!-- Result Screen -->
-    <div id="resultScreen" style="display:none;" class="text-center">
-      <div id="resultEmoji" class="text-8xl mb-4">🏆</div>
-      <h2 id="resultTitle" class="text-3xl font-bold mb-4">Kết quả</h2>
-      <div id="scoreDisplay" class="text-xl text-purple-700"></div>
-      <button onclick="goToHome()" class="mt-4 bg-purple-500 text-white px-6 py-3 rounded-full">🏠 Trang chủ</button>
-    </div>
-
-    <!-- Leaderboard -->
-    <div id="leaderboardScreen" style="display:none;">
-      <h2 class="text-2xl font-bold text-purple-700 mb-4">🏆 Bảng xếp hạng</h2>
-      <div id="leaderboardList"></div>
-      <button onclick="goToHome()" class="mt-4 bg-purple-500 text-white px-6 py-3 rounded-full">🏠 Trang chủ</button>
+    <!-- Màn hình kết quả -->
+    <div id="resultScreen" style="display:none;">
+      <div class="bg-white rounded-2xl p-6 text-center shadow-md">
+        <div id="resultEmoji" class="text-6xl mb-4">🏆</div>
+        <h2 id="resultTitle" class="text-2xl font-bold mb-4">Kết quả</h2>
+        <div id="scoreDisplay" class="text-xl font-bold mb-2">0/0</div>
+        <div id="percentDisplay" class="text-lg text-gray-700">0%</div>
+        <div class="mt-4">
+          <button onclick="goHome()" class="px-6 py-3 bg-purple-500 text-white rounded-xl">🏠 Trang chủ</button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div id="fireworksContainer" class="fireworks"></div>
+  <!-- Popup động viên -->
+  <div id="encouragementMessage" class="encouragement" style="display:none;">
+    <div class="text-center">
+      <div class="text-lg font-bold text-red-600">Sai rồi!</div>
+      <div class="text-sm text-gray-700">Đáp án đúng sẽ hiện nhé 🌟</div>
+    </div>
+  </div>
 
-  <script>
-    let currentQuestions=[],currentIndex=0,score=0,currentSubject="";
+<script>
+let questions = [];
+let currentIndex = 0, score = 0;
 
-    const correctSound=new Audio("assets/correct.mp3");
-    const wrongSound=new Audio("assets/wrong.mp3");
+function startSubject(file, title) {
+  fetch('data/' + file)
+    .then(r=>r.json())
+    .then(data=>{
+      questions = shuffleArray(data).slice(0,10);
+      currentIndex=0; score=0;
+      document.getElementById('homeScreen').style.display="none";
+      document.getElementById('resultScreen').style.display="none";
+      document.getElementById('gameScreen').style.display="block";
+      displayQuestion();
+    });
+}
 
-    function startMath(){fetch("data/toan2.json").then(r=>r.json()).then(d=>startGame("🔢 Toán 2",d));}
-    function startVietnamese(){fetch("data/tiengviet2.json").then(r=>r.json()).then(d=>startGame("📘 Tiếng Việt 2",d));}
-    function startScience(){fetch("data/tnxh2.json").then(r=>r.json()).then(d=>startGame("🌱 Tự nhiên & Xã hội",d));}
-    function startEnglish(){fetch("data/tienganh2.json").then(r=>r.json()).then(d=>startGame("🌍 English 2",d));}
-    function startMixed(){fetch("data/honhop.json").then(r=>r.json()).then(d=>startGame("🎲 Hỗn hợp",d));}
+function displayQuestion() {
+  const q = questions[currentIndex];
+  document.getElementById('questionEmoji').textContent = q.emoji||'❓';
+  document.getElementById('questionDisplay').textContent = q.q;
+  document.getElementById('optionsContainer').style.display='none';
+  document.getElementById('fillBlankContainer').style.display='none';
+  document.getElementById('dragDropContainer').style.display='none';
 
-    function startGame(sub,questions){
-      currentSubject=sub;currentQuestions=shuffleArray(questions).slice(0,10);
-      currentIndex=0;score=0;showScreen("gameScreen");displayQuestion();
-    }
-    function displayQuestion(){
-      let q=currentQuestions[currentIndex];
-      document.getElementById("subjectDisplay").textContent=currentSubject;
-      document.getElementById("progressDisplay").textContent=`Câu ${currentIndex+1}/${currentQuestions.length}`;
-      document.getElementById("questionEmoji").textContent=q.emoji;
-      document.getElementById("questionDisplay").textContent=q.q;
-      document.getElementById("speakButton").style.display=(currentSubject.includes("English"))?"inline-block":"none";
-      let cont=document.getElementById("optionsContainer");cont.innerHTML="";
-      q.options.forEach((opt,i)=>{
-        let btn=document.createElement("button");
-        btn.className="option-button";
-        btn.textContent=`${String.fromCharCode(65+i)}. ${opt}`;
-        btn.onclick=()=>selectOption(i);
-        cont.appendChild(btn);
-      });
-    }
-    function selectOption(i){
-      let q=currentQuestions[currentIndex];
-      let cont=document.querySelectorAll(".option-button");
-      cont.forEach((b,idx)=>{
-        b.disabled=true;
-        if(idx===q.answer){b.classList.add("bg-green-600");}
-        else if(idx===i){b.classList.add("bg-red-600");}
-      });
-      if(i===q.answer){score++;correctSound.currentTime=0;correctSound.play();createFireworks();}
-      else{wrongSound.currentTime=0;wrongSound.play();showEncouragement();}
-      setTimeout(nextQuestion,2000);
-    }
-    function nextQuestion(){
-      if(currentIndex+1<currentQuestions.length){currentIndex++;displayQuestion();}
-      else{showResults();}
-    }
-    function showResults(){
-      showScreen("resultScreen");
-      document.getElementById("resultEmoji").textContent=(score>=8)?"🏆":(score>=5)?"🌟":"💪";
-      document.getElementById("resultTitle").textContent="Hoàn thành!";
-      document.getElementById("scoreDisplay").textContent=`${score}/${currentQuestions.length} câu đúng`;
-      saveScore();
-    }
-    function saveScore(){
-      let scores=JSON.parse(localStorage.getItem("scores")||"[]");
-      scores.push({subject:currentSubject,score,date:new Date().toLocaleString("vi-VN")});
-      localStorage.setItem("scores",JSON.stringify(scores));
-    }
-    function showLeaderboard(){
-      showScreen("leaderboardScreen");
-      let scores=JSON.parse(localStorage.getItem("scores")||"[]").slice(-10);
-      document.getElementById("leaderboardList").innerHTML=scores.map(s=>`<div class="p-2 bg-purple-100 rounded mb-2">${s.subject}: ${s.score} điểm - ${s.date}</div>`).join("");
-    }
-    function showScreen(id){
-      ["homeScreen","gameScreen","resultScreen","leaderboardScreen"].forEach(x=>document.getElementById(x).style.display="none");
-      document.getElementById(id).style.display="block";
-    }
-    function shuffleArray(a){return a.sort(()=>Math.random()-0.5);}
-    function createFireworks(){
-      const c=document.getElementById("fireworksContainer");
-      for(let i=0;i<15;i++){setTimeout(()=>{
-        let f=document.createElement("div");
-        f.className="firework";
-        f.style.left=Math.random()*100+"%";
-        f.style.top=Math.random()*100+"%";
-        f.style.backgroundColor=["#ff6b6b","#feca57","#48dbfb","#1dd1a1","#5f27cd"][Math.floor(Math.random()*5)];
-        c.appendChild(f);
-        setTimeout(()=>c.removeChild(f),1000);
-      },i*100);}
-    }
-    function showEncouragement(){
-      alert("💡 Không sao đâu! Cố gắng lần sau nhé!");
-    }
-    function speakQuestion(){
-      let q=currentQuestions[currentIndex];
-      if("speechSynthesis" in window){
-        let u=new SpeechSynthesisUtterance(q.q);
-        u.lang="en-US";u.rate=0.9;
-        speechSynthesis.speak(u);
-      }
-    }
-    function goToHome(){showScreen("homeScreen");}
-  </script>
+  if(q.type==="multiple"){
+    let container=document.getElementById('optionsContainer');
+    container.innerHTML='';
+    q.options.forEach((opt,i)=>{
+      let btn=document.createElement('button');
+      btn.className='option-button w-full';
+      btn.textContent=opt;
+      btn.onclick=()=>checkAnswer(i===q.answer, q);
+      container.appendChild(btn);
+    });
+    container.style.display='block';
+  } else if(q.type==="fill"){
+    let container=document.getElementById('fillBlankContainer');
+    container.innerHTML=`
+      <input id="fillInput" class="border p-2 rounded w-2/3 text-center" placeholder="Điền đáp án..."><br>
+      <button onclick="checkFill('${q.answer}')" class="mt-3 px-4 py-2 bg-blue-500 text-white rounded">Kiểm tra</button>
+    `;
+    container.style.display='block';
+  } else if(q.type==="drag"){
+    let container=document.getElementById('dragDropContainer');
+    container.innerHTML=`
+      <div id="dropZone" class="border-2 border-dashed p-6 mb-4">Kéo đáp án vào đây</div>
+      <div class="flex flex-wrap gap-2 justify-center">
+        ${q.dragItems.map(opt=>`<div class="px-4 py-2 bg-pink-300 rounded cursor-move" draggable="true" ondragstart="drag(event)" data="${opt}">${opt}</div>`).join('')}
+      </div>
+    `;
+    container.style.display='block';
+    document.getElementById('dropZone').ondrop=function(ev){ev.preventDefault(); let v=ev.dataTransfer.getData("text"); checkAnswer(v===q.answer,q);};
+    document.getElementById('dropZone').ondragover=function(ev){ev.preventDefault();};
+  }
+}
+
+function checkAnswer(correct,q){
+  if(correct){ score++; fireworks(); }
+  else { showEncouragement(q.answer); }
+  setTimeout(()=>{ nextQuestion(); },2000);
+}
+function checkFill(ans){
+  let v=document.getElementById('fillInput').value.trim();
+  checkAnswer(v.toLowerCase()===ans.toLowerCase(), {answer:ans});
+}
+function nextQuestion(){
+  currentIndex++;
+  if(currentIndex<questions.length){ displayQuestion(); }
+  else { showResults(); }
+}
+function showResults(){
+  let percent=Math.round(score/questions.length*100);
+  document.getElementById('gameScreen').style.display="none";
+  document.getElementById('resultScreen').style.display="block";
+  document.getElementById('scoreDisplay').textContent=`${score}/${questions.length}`;
+  document.getElementById('percentDisplay').textContent=`${percent}% ${percent>=90?"🏆 Xuất sắc!":percent>=70?"🌟 Tốt lắm!":percent>=50?"👍 Khá tốt!":"💪 Cố gắng hơn nhé!"}`;
+}
+function goHome(){
+  document.getElementById('homeScreen').style.display="block";
+  document.getElementById('gameScreen').style.display="none";
+  document.getElementById('resultScreen').style.display="none";
+}
+function showEncouragement(correctAns){
+  let box=document.getElementById('encouragementMessage');
+  box.style.display="block";
+  box.querySelector('.text-sm').innerHTML=`Đáp án đúng: <b>${correctAns}</b>`;
+  setTimeout(()=>{box.style.display="none";},2500);
+}
+function fireworks(){
+  // hiệu ứng đơn giản
+  let e=document.createElement('div');
+  e.style.position='fixed'; e.style.left='50%'; e.style.top='50%';
+  e.style.fontSize='3rem'; e.textContent='🎉';
+  document.body.appendChild(e);
+  setTimeout(()=>document.body.removeChild(e),1000);
+}
+function shuffleArray(a){return a.map(x=>({x,sort:Math.random()})).sort((a,b)=>a.sort-b.sort).map(({x})=>x);}
+
+// Fix kéo xuống reload
+document.addEventListener('touchmove', function (e) {
+  if (window.scrollY === 0 && e.touches[0].clientY > 50) {
+    e.preventDefault();
+  }
+}, { passive: false });
+</script>
 </body>
 </html>
