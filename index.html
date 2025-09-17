@@ -32,13 +32,21 @@
   <div id="home" class="flex-grow flex flex-col justify-center items-center">
     <h1 class="text-4xl font-extrabold text-purple-700 mb-6">Chọn môn học</h1>
     <div class="grid grid-cols-2 gap-6 max-w-lg">
-      <button onclick="startGame('toan2.json','🔢 Toán 2')" class="subject-btn bg-blue-400 text-white">🔢 Toán 2</button>
-      <button onclick="startGame('tiengviet2.json','📘 Tiếng Việt 2')" class="subject-btn bg-green-400 text-white">📘 Tiếng Việt 2</button>
-      <button onclick="startGame('tnxh2.json','🌱 Tự nhiên & XH 2')" class="subject-btn bg-yellow-400 text-white">🌱 Tự nhiên & XH 2</button>
-      <button onclick="startGame('tienganh2.json','🌍 English 2')" class="subject-btn bg-red-400 text-white">🌍 English 2</button>
-      <button onclick="startGame('mixed','🎲 Hỗn hợp')" class="col-span-2 subject-btn bg-purple-500 text-white">🎲 Hỗn hợp</button>
+      <button onclick="chooseMode('toan2.json','🔢 Toán 2')" class="subject-btn bg-blue-400 text-white">🔢 Toán 2</button>
+      <button onclick="chooseMode('tiengviet2.json','📘 Tiếng Việt 2')" class="subject-btn bg-green-400 text-white">📘 Tiếng Việt 2</button>
+      <button onclick="chooseMode('tnxh2.json','🌱 Tự nhiên & XH 2')" class="subject-btn bg-yellow-400 text-white">🌱 Tự nhiên & XH 2</button>
+      <button onclick="chooseMode('tienganh2.json','🌍 English 2')" class="subject-btn bg-red-400 text-white">🌍 English 2</button>
+      <button onclick="chooseMode('mixed','🎲 Hỗn hợp')" class="col-span-2 subject-btn bg-purple-500 text-white">🎲 Hỗn hợp</button>
       <button onclick="showAchievements()" class="col-span-2 subject-btn bg-pink-500 text-white">🏆 Thành tựu</button>
     </div>
+  </div>
+
+  <!-- Màn hình chọn chế độ -->
+  <div id="modeSelect" class="hidden flex-grow flex flex-col justify-center items-center text-center">
+    <h2 id="modeTitle" class="text-3xl font-bold mb-6"></h2>
+    <button onclick="startGame('normal')" class="subject-btn bg-green-500 text-white mb-4">🎮 Chơi 10 câu</button>
+    <button onclick="startGame('practice')" class="subject-btn bg-orange-500 text-white mb-4">🎯 Luyện tập vô hạn</button>
+    <button onclick="goHome()" class="subject-btn bg-gray-500 text-white">🏠 Về trang chủ</button>
   </div>
 
   <!-- Màn hình game -->
@@ -67,6 +75,7 @@
 
   <script>
     const home = document.getElementById("home");
+    const modeSelect = document.getElementById("modeSelect");
     const game = document.getElementById("game");
     const result = document.getElementById("result");
     const achievements = document.getElementById("achievements");
@@ -78,16 +87,24 @@
     let current = 0;
     let score = 0;
     let subject = "";
+    let mode = "normal"; // normal = 10 câu, practice = vô hạn
+    let dataFile = "";
 
-    function startGame(file, title) {
+    function chooseMode(file, title) {
       home.classList.add("hidden");
-      result.classList.add("hidden");
-      achievements.classList.add("hidden");
-      game.classList.remove("hidden");
-      document.getElementById("subjectTitle").innerText = title;
+      modeSelect.classList.remove("hidden");
+      document.getElementById("modeTitle").innerText = `Chọn chế độ cho ${title}`;
       subject = title;
+      dataFile = file;
+    }
 
-      if (file === "mixed") {
+    function startGame(selectedMode) {
+      mode = selectedMode;
+      modeSelect.classList.add("hidden");
+      game.classList.remove("hidden");
+      document.getElementById("subjectTitle").innerText = subject;
+
+      if (dataFile === "mixed") {
         Promise.all([
           fetch("data/toan2.json").then(r=>r.json()),
           fetch("data/tiengviet2.json").then(r=>r.json()),
@@ -98,7 +115,7 @@
           startQuiz();
         });
       } else {
-        fetch("data/" + file).then(r=>r.json()).then(data=>{
+        fetch("data/" + dataFile).then(r=>r.json()).then(data=>{
           questions = data;
           startQuiz();
         });
@@ -107,14 +124,25 @@
     }
 
     function startQuiz() {
-      questions = shuffle(questions).slice(0,10);
       current = 0;
       score = 0;
+      if (mode === "normal") {
+        questions = shuffle(questions).slice(0,10);
+      } else {
+        questions = shuffle(questions);
+      }
       showQuestion();
     }
 
     function showQuestion() {
-      const q = questions[current];
+      if (mode === "normal" && current >= 10) { endGame(); return; }
+      if (mode === "practice" && questions.length === 0) {
+        // refill khi luyện tập
+        fetchDataAgain();
+        return;
+      }
+
+      const q = questions[current % questions.length];
       document.getElementById("question").innerText = q.q;
       document.getElementById("options").innerHTML = "";
       q.options.forEach((opt,i)=>{
@@ -124,7 +152,7 @@
         btn.onclick = ()=>checkAnswer(i, q.answer, btn);
         document.getElementById("options").appendChild(btn);
       });
-      document.getElementById("progress").innerText = `Câu ${current+1}/10`;
+      document.getElementById("progress").innerText = (mode==="normal") ? `Câu ${current+1}/10` : `Câu số ${current+1}`;
     }
 
     function checkAnswer(i, correct, btn) {
@@ -139,7 +167,7 @@
       }
       setTimeout(()=>{
         current++;
-        if (current<10) showQuestion(); else endGame();
+        showQuestion();
       },1000);
     }
 
@@ -148,16 +176,13 @@
       result.classList.remove("hidden");
       document.getElementById("score").innerText = `Bé làm đúng ${score}/10 câu`;
 
-      // lưu thành tựu
       const all = JSON.parse(localStorage.getItem("achievements")||"[]");
-      all.push({subject, score, date:new Date().toLocaleString("vi-VN")});
+      all.push({subject, score, mode, date:new Date().toLocaleString("vi-VN")});
       localStorage.setItem("achievements", JSON.stringify(all));
     }
 
     function showAchievements() {
       home.classList.add("hidden");
-      result.classList.add("hidden");
-      game.classList.add("hidden");
       achievements.classList.remove("hidden");
       const list = document.getElementById("achievementsList");
       const all = JSON.parse(localStorage.getItem("achievements")||"[]");
@@ -166,8 +191,8 @@
       } else {
         list.innerHTML = all.map(a=>`
           <div class="p-4 bg-white shadow rounded">
-            <p><b>${a.subject}</b></p>
-            <p>Điểm: ${a.score}/10</p>
+            <p><b>${a.subject}</b> (${a.mode==="normal"?"10 câu":"Luyện tập"})</p>
+            <p>Điểm: ${a.score}</p>
             <p class="text-sm text-gray-500">${a.date}</p>
           </div>`).join("");
       }
@@ -175,6 +200,7 @@
 
     function goHome() {
       home.classList.remove("hidden");
+      modeSelect.classList.add("hidden");
       game.classList.add("hidden");
       result.classList.add("hidden");
       achievements.classList.add("hidden");
@@ -193,6 +219,13 @@
         document.body.appendChild(fw);
         setTimeout(()=>fw.remove(),1000);
       }
+    }
+
+    function fetchDataAgain() {
+      fetch("data/" + dataFile).then(r=>r.json()).then(data=>{
+        questions = shuffle(data);
+        showQuestion();
+      });
     }
   </script>
 </body>
