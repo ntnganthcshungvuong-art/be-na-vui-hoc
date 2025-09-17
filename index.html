@@ -32,30 +32,21 @@
 
     /* Rực rỡ đáp án */
     .option-button {
-      border: none !important;
-      font-size: 1.1rem;
-      font-weight: 700;
-      transition: all 0.3s ease;
       padding: 1rem;
+      margin-bottom: 0.5rem;
       border-radius: 1rem;
+      font-size: 1.2rem;
+      font-weight: 700;
       color: #fff;
+      transition: transform 0.2s;
+      width: 100%;
+      display: block;
     }
-    .option-button:nth-child(1) {
-      background: linear-gradient(135deg, #f59e0b, #fbbf24);
-    }
-    .option-button:nth-child(2) {
-      background: linear-gradient(135deg, #3b82f6, #60a5fa);
-    }
-    .option-button:nth-child(3) {
-      background: linear-gradient(135deg, #10b981, #34d399);
-    }
-    .option-button:nth-child(4) {
-      background: linear-gradient(135deg, #ec4899, #f472b6);
-    }
-    .option-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
+    .option-button:nth-child(1){background:linear-gradient(135deg,#f59e0b,#fbbf24);}
+    .option-button:nth-child(2){background:linear-gradient(135deg,#3b82f6,#60a5fa);}
+    .option-button:nth-child(3){background:linear-gradient(135deg,#10b981,#34d399);}
+    .option-button:nth-child(4){background:linear-gradient(135deg,#ec4899,#f472b6);}
+    .option-button:hover{transform:scale(1.05);}
   </style>
 </head>
 <body class="bg-gradient-to-br from-pink-100 via-yellow-50 to-blue-100">
@@ -139,9 +130,9 @@ function displayQuestion() {
     container.innerHTML='';
     q.options.forEach((opt,i)=>{
       let btn=document.createElement('button');
-      btn.className='option-button w-full';
-      btn.textContent=opt;
-      btn.onclick=()=>checkAnswer(i===q.answer, q);
+      btn.className='option-button';
+      btn.textContent = opt;
+      btn.onclick=()=>selectOption(i,q);
       container.appendChild(btn);
     });
     container.style.display='block';
@@ -164,6 +155,23 @@ function displayQuestion() {
     document.getElementById('dropZone').ondrop=function(ev){ev.preventDefault(); let v=ev.dataTransfer.getData("text"); checkAnswer(v===q.answer,q);};
     document.getElementById('dropZone').ondragover=function(ev){ev.preventDefault();};
   }
+}
+
+function selectOption(index,q){
+  const buttons=document.querySelectorAll('#optionsContainer button');
+  buttons.forEach((btn,i)=>{
+    btn.disabled=true;
+    if(i===q.answer){
+      btn.className='w-full block px-4 py-3 rounded-xl font-bold bg-green-500 text-white';
+    }else if(i===index){
+      btn.className='w-full block px-4 py-3 rounded-xl font-bold bg-red-500 text-white';
+    }else{
+      btn.className='w-full block px-4 py-3 rounded-xl bg-gray-200 text-gray-600';
+    }
+  });
+  if(index===q.answer){ score++; fireworks(); }
+  else { showEncouragement(q.options[q.answer]); }
+  setTimeout(()=>{nextQuestion();},2000);
 }
 
 function checkAnswer(correct,q){
@@ -199,9 +207,9 @@ function showEncouragement(correctAns){
   setTimeout(()=>{box.style.display="none";},2500);
 }
 function fireworks(){
-  // hiệu ứng đơn giản
   let e=document.createElement('div');
   e.style.position='fixed'; e.style.left='50%'; e.style.top='50%';
+  e.style.transform='translate(-50%,-50%)';
   e.style.fontSize='3rem'; e.textContent='🎉';
   document.body.appendChild(e);
   setTimeout(()=>document.body.removeChild(e),1000);
