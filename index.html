@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌸 Bé Na Vui Học 🌸</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Comic Sans MS', cursive; }
+    .marquee { width:100%; overflow:hidden; white-space:nowrap; animation: marquee 12s linear infinite; }
+    @keyframes marquee { 0% { text-indent:100% } 100% { text-indent:-100% } }
+    .celebrate { animation: pop 0.6s ease; }
+    @keyframes pop { 0%{transform:scale(0.5);opacity:0;} 100%{transform:scale(1);opacity:1;} }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-pink-100 via-yellow-50 to-purple-100 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <div class="bg-pink-300 py-3 text-center text-white font-bold text-xl shadow">
+    <div class="marquee">🌸🌸🌸 Bé Na Vui Học 🌸🌸🌸</div>
+  </div>
+
+  <!-- Home -->
+  <div id="home" class="flex-grow flex flex-col items-center justify-center space-y-6">
+    <h1 class="text-3xl font-extrabold text-purple-600">Chọn môn học</h1>
+    <button onclick="startGame('data/toan2.json','🔢 Toán 2')" class="p-6 rounded-full bg-gradient-to-r from-blue-400 to-blue-600 text-white text-lg shadow-lg">
+      🔢 Toán 2
+    </button>
+  </div>
+
+  <!-- Game -->
+  <div id="game" style="display:none;" class="flex-grow flex flex-col items-center justify-center p-4 space-y-4">
+    <h2 id="subject" class="text-2xl font-bold text-purple-700"></h2>
+    <div id="question" class="text-xl text-center"></div>
+    <div id="options" class="grid gap-3"></div>
+    <div id="progress" class="text-sm text-gray-500"></div>
+  </div>
+
+  <!-- Result -->
+  <div id="result" style="display:none;" class="flex-grow flex flex-col items-center justify-center space-y-4">
+    <div id="emoji" class="text-6xl"></div>
+    <h2 id="summary" class="text-2xl font-bold"></h2>
+    <button onclick="backHome()" class="px-6 py-3 bg-pink-400 rounded-full text-white">🏠 Về trang chủ</button>
+  </div>
+
+<script>
+let questions=[], current=0, score=0;
+
+async function startGame(file, subject) {
+  document.getElementById('home').style.display='none';
+  document.getElementById('game').style.display='flex';
+  document.getElementById('subject').innerText = subject;
+
+  questions = await fetch(file).then(r=>r.json());
+  questions = shuffle(questions).slice(0,10); // lấy ngẫu nhiên 10 câu
+
+  current=0; score=0; showQuestion();
+}
+
+function showQuestion(){
+  let q=questions[current];
+  document.getElementById('question').innerText=q.q;
+  let opt=document.getElementById('options'); opt.innerHTML='';
+  q.options.forEach((o,i)=>{
+    let b=document.createElement('button');
+    b.className="p-4 bg-white rounded-xl shadow hover:bg-purple-100";
+    b.innerText=o; 
+    b.onclick=()=>check(i===q.answer);
+    opt.appendChild(b);
+  });
+  document.getElementById('progress').innerText=`Câu ${current+1}/${questions.length}`;
+}
+
+function check(correct){
+  if(correct){ score++; celebrate("🎉 Đúng rồi!"); }
+  else { celebrate("💔 Sai mất rồi!"); }
+  setTimeout(()=>{ current++; (current<questions.length)?showQuestion():endGame(); },1500);
+}
+
+function celebrate(msg){
+  let q=document.getElementById('question');
+  q.innerText=msg;
+  q.classList.add("celebrate");
+  setTimeout(()=>q.classList.remove("celebrate"),600);
+}
+
+function endGame(){
+  document.getElementById('game').style.display='none';
+  document.getElementById('result').style.display='flex';
+  document.getElementById('emoji').innerText = score>=8?"🏆":score>=5?"🌟":"💪";
+  document.getElementById('summary').innerText = `Bé trả lời đúng ${score}/${questions.length} câu`;
+}
+
+function backHome(){
+  document.getElementById('result').style.display='none';
+  document.getElementById('home').style.display='flex';
+}
+
+function shuffle(a){return a.sort(()=>Math.random()-0.5);}
+</script>
+</body>
+</html>
 
