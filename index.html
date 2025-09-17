@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>🌸 Bé Xu Vui Học 🌸</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -14,14 +14,15 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      max-width: 250px;
+      max-width: 260px;
       background: rgba(255,255,255,0.95);
       border: 2px solid #fca5a5;
       border-radius: 16px;
-      padding: 12px;
+      padding: 14px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
       animation: fadeInOut 3s ease forwards;
-      z-index: 999;
+      z-index: 9999;
+      font-size: 1rem;
     }
     @keyframes fadeInOut {
       0% { opacity: 0; transform: translateY(20px); }
@@ -32,10 +33,10 @@
 
     /* Rực rỡ đáp án */
     .option-button {
-      padding: 1rem;
-      margin-bottom: 0.5rem;
+      padding: 1.2rem;
+      margin-bottom: 0.7rem;
       border-radius: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 700;
       color: #fff;
       transition: transform 0.2s;
@@ -46,12 +47,12 @@
     .option-button:nth-child(2){background:linear-gradient(135deg,#3b82f6,#60a5fa);}
     .option-button:nth-child(3){background:linear-gradient(135deg,#10b981,#34d399);}
     .option-button:nth-child(4){background:linear-gradient(135deg,#ec4899,#f472b6);}
-    .option-button:hover{transform:scale(1.05);}
+    .option-button:active{transform:scale(1.05);}
   </style>
 </head>
-<body class="bg-gradient-to-br from-pink-100 via-yellow-50 to-blue-100">
+<body class="bg-gradient-to-br from-pink-100 via-yellow-50 to-blue-100 min-h-screen flex flex-col">
 
-  <div class="max-w-4xl mx-auto p-4">
+  <div class="max-w-4xl mx-auto p-4 flex-grow">
     <h1 class="text-4xl font-extrabold text-center mb-6 text-purple-700 animate-bounce">
       🌸 Bé Na Vui Học 🌸
     </h1>
@@ -59,17 +60,17 @@
     <!-- Màn hình chính -->
     <div id="homeScreen">
       <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
-        <button onclick="startSubject('toan2.json','🔢 Toán 2')" class="p-5 rounded-2xl bg-blue-500 text-white font-bold">🔢<br>Toán 2</button>
-        <button onclick="startSubject('tiengviet2.json','📘 Tiếng Việt 2')" class="p-5 rounded-2xl bg-green-500 text-white font-bold">📘<br>Tiếng Việt 2</button>
-        <button onclick="startSubject('tnxh2.json','🌱 Tự nhiên & Xã hội 2')" class="p-5 rounded-2xl bg-yellow-500 text-white font-bold">🌱<br>Tự nhiên & Xã hội 2</button>
-        <button onclick="startSubject('tienganh2.json','🌍 English 2')" class="p-5 rounded-2xl bg-red-500 text-white font-bold">🌍<br>English 2</button>
-        <button onclick="startSubject('honhop.json','🎲 Hỗn hợp')" class="p-5 rounded-2xl bg-purple-500 text-white font-bold">🎲<br>Hỗn hợp</button>
+        <button ontouchstart onclick="startSubject('toan2.json','🔢 Toán 2')" class="p-6 rounded-2xl bg-blue-500 text-white font-bold text-xl">🔢<br>Toán 2</button>
+        <button ontouchstart onclick="startSubject('tiengviet2.json','📘 Tiếng Việt 2')" class="p-6 rounded-2xl bg-green-500 text-white font-bold text-xl">📘<br>Tiếng Việt 2</button>
+        <button ontouchstart onclick="startSubject('tnxh2.json','🌱 Tự nhiên & Xã hội 2')" class="p-6 rounded-2xl bg-yellow-500 text-white font-bold text-xl">🌱<br>Tự nhiên & Xã hội 2</button>
+        <button ontouchstart onclick="startSubject('tienganh2.json','🌍 English 2')" class="p-6 rounded-2xl bg-red-500 text-white font-bold text-xl">🌍<br>English 2</button>
+        <button ontouchstart onclick="startSubject('honhop.json','🎲 Hỗn hợp')" class="p-6 rounded-2xl bg-purple-500 text-white font-bold text-xl">🎲<br>Hỗn hợp</button>
       </div>
     </div>
 
     <!-- Màn hình chơi -->
     <div id="gameScreen" style="display:none;">
-      <div class="bg-white rounded-2xl p-6 shadow-md">
+      <div class="bg-white rounded-2xl p-6 shadow-md min-h-[300px]">
         <div id="questionEmoji" class="text-5xl text-center mb-4">🤔</div>
         <h2 id="questionDisplay" class="text-2xl font-bold text-center mb-6">Câu hỏi...</h2>
         <div id="optionsContainer" class="space-y-3"></div>
@@ -86,7 +87,7 @@
         <div id="scoreDisplay" class="text-xl font-bold mb-2">0/0</div>
         <div id="percentDisplay" class="text-lg text-gray-700">0%</div>
         <div class="mt-4">
-          <button onclick="goHome()" class="px-6 py-3 bg-purple-500 text-white rounded-xl">🏠 Trang chủ</button>
+          <button ontouchstart onclick="goHome()" class="px-6 py-3 bg-purple-500 text-white rounded-xl text-lg">🏠 Trang chủ</button>
         </div>
       </div>
     </div>
@@ -104,17 +105,19 @@
 let questions = [];
 let currentIndex = 0, score = 0;
 
-function startSubject(file, title) {
-  fetch('data/' + file)
-    .then(r=>r.json())
-    .then(data=>{
-      questions = shuffleArray(data).slice(0,10);
-      currentIndex=0; score=0;
-      document.getElementById('homeScreen').style.display="none";
-      document.getElementById('resultScreen').style.display="none";
-      document.getElementById('gameScreen').style.display="block";
-      displayQuestion();
-    });
+async function startSubject(file, title) {
+  try {
+    const r = await fetch('data/' + file + '?v=' + Date.now()); // chống cache
+    if(!r.ok) throw new Error("Không tải được file " + file);
+    const data = await r.json();
+    questions = shuffleArray(data).slice(0,10);
+    currentIndex=0; score=0;
+    showScreen("gameScreen");
+    displayQuestion();
+  } catch(err) {
+    alert("❌ Lỗi tải dữ liệu: " + err.message);
+    showScreen("homeScreen");
+  }
 }
 
 function displayQuestion() {
@@ -122,12 +125,11 @@ function displayQuestion() {
   document.getElementById('questionEmoji').textContent = q.emoji || '❓';
   document.getElementById('questionDisplay').textContent = q.q;
 
-  // Ẩn hết container
+  // Ẩn hết
   document.getElementById('optionsContainer').style.display='none';
   document.getElementById('fillBlankContainer').style.display='none';
   document.getElementById('dragDropContainer').style.display='none';
 
-  // Nếu không có type => mặc định multiple
   if(!q.type || q.type==="multiple"){
     let container=document.getElementById('optionsContainer');
     container.innerHTML='';
@@ -136,37 +138,12 @@ function displayQuestion() {
         let btn=document.createElement('button');
         btn.className='option-button';
         btn.textContent = opt;
+        btn.ontouchstart=()=>selectOption(i,q);
         btn.onclick=()=>selectOption(i,q);
         container.appendChild(btn);
       });
-    } else {
-      container.innerHTML='<p class="text-red-500">⚠ Lỗi: Không có options trong JSON</p>';
     }
     container.style.display='block';
-  }
-  else if(q.type==="fill"){
-    let container=document.getElementById('fillBlankContainer');
-    container.innerHTML=`
-      <input id="fillInput" class="border p-2 rounded w-2/3 text-center" placeholder="Điền đáp án..."><br>
-      <button onclick="checkFill('${q.answer}')" class="mt-3 px-4 py-2 bg-blue-500 text-white rounded">Kiểm tra</button>
-    `;
-    container.style.display='block';
-  }
-  else if(q.type==="drag"){
-    let container=document.getElementById('dragDropContainer');
-    container.innerHTML=`
-      <div id="dropZone" class="border-2 border-dashed p-6 mb-4">Kéo đáp án vào đây</div>
-      <div class="flex flex-wrap gap-2 justify-center">
-        ${q.dragItems.map(opt=>`<div class="px-4 py-2 bg-pink-300 rounded cursor-move" draggable="true" ondragstart="drag(event)" data="${opt}">${opt}</div>`).join('')}
-      </div>
-    `;
-    container.style.display='block';
-    document.getElementById('dropZone').ondrop=function(ev){
-      ev.preventDefault();
-      let v=ev.dataTransfer.getData("text");
-      checkAnswer(v===q.answer,q);
-    };
-    document.getElementById('dropZone').ondragover=function(ev){ev.preventDefault();};
   }
 }
 
@@ -187,38 +164,34 @@ function selectOption(index,q){
   setTimeout(()=>{nextQuestion();},2000);
 }
 
-function checkAnswer(correct,q){
-  if(correct){ score++; fireworks(); }
-  else { showEncouragement(q.answer); }
-  setTimeout(()=>{ nextQuestion(); },2000);
-}
-function checkFill(ans){
-  let v=document.getElementById('fillInput').value.trim();
-  checkAnswer(v.toLowerCase()===ans.toLowerCase(), {answer:ans});
-}
 function nextQuestion(){
   currentIndex++;
   if(currentIndex<questions.length){ displayQuestion(); }
   else { showResults(); }
 }
+
 function showResults(){
   let percent=Math.round(score/questions.length*100);
-  document.getElementById('gameScreen').style.display="none";
-  document.getElementById('resultScreen').style.display="block";
+  showScreen("resultScreen");
   document.getElementById('scoreDisplay').textContent=`${score}/${questions.length}`;
   document.getElementById('percentDisplay').textContent=`${percent}% ${percent>=90?"🏆 Xuất sắc!":percent>=70?"🌟 Tốt lắm!":percent>=50?"👍 Khá tốt!":"💪 Cố gắng hơn nhé!"}`;
 }
-function goHome(){
-  document.getElementById('homeScreen').style.display="block";
-  document.getElementById('gameScreen').style.display="none";
-  document.getElementById('resultScreen').style.display="none";
+
+function goHome(){ showScreen("homeScreen"); }
+
+function showScreen(id){
+  ["homeScreen","gameScreen","resultScreen"].forEach(s=>{
+    document.getElementById(s).style.display=(s===id)?"block":"none";
+  });
 }
+
 function showEncouragement(correctAns){
   let box=document.getElementById('encouragementMessage');
   box.style.display="block";
   box.querySelector('.text-sm').innerHTML=`Đáp án đúng: <b>${correctAns}</b>`;
   setTimeout(()=>{box.style.display="none";},2500);
 }
+
 function fireworks(){
   let e=document.createElement('div');
   e.style.position='fixed'; e.style.left='50%'; e.style.top='50%';
@@ -227,14 +200,8 @@ function fireworks(){
   document.body.appendChild(e);
   setTimeout(()=>document.body.removeChild(e),1000);
 }
-function shuffleArray(a){return a.map(x=>({x,sort:Math.random()})).sort((a,b)=>a.sort-b.sort).map(({x})=>x);}
 
-// Fix kéo xuống reload
-document.addEventListener('touchmove', function (e) {
-  if (window.scrollY === 0 && e.touches[0].clientY > 50) {
-    e.preventDefault();
-  }
-}, { passive: false });
+function shuffleArray(a){return a.map(x=>({x,sort:Math.random()})).sort((a,b)=>a.sort-b.sort).map(({x})=>x);}
 </script>
 </body>
 </html>
